@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="h-16 w-full text-white font-bold text-2xl">
+      <div className="h-16 w-full text-white font-bold text-2xl overflow-hidden">
         {windowSize.width > 1024 && (
           <div className="flex justify-end items-center gap-10 px-10 py-5 transition-all">
             <LinkButtons />
@@ -17,7 +17,7 @@ const Header = () => {
         )}
 
         {windowSize.width <= 1024 && (
-          <div className="transition-all absolute right-0 w-full sm:w-72">
+          <div className="transition-all absolute right-0 w-full sm:w-72 z-30 transition-all">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="absolute right-5 top-5 z-10"

@@ -9,9 +9,10 @@ module.exports = {
       white: "#ffffff",
       gray: "#CCCCCC",
       gold: "#DCAC58",
+      darkGold: "#AC8747",
       backgroundLight: "#252836",
       backgroundDark: "#1F1D2B",
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
