@@ -31,9 +31,9 @@ const Header = () => {
             <div
               className={`relative flex flex-col justify-end items-center gap-10 pt-16 pb-7 rounded-b-xl ${
                 isOpen ? "opacity-100 bg-backgroundLight" : "opacity-0"
-              } transition-all`}
+              } duration-75`}
             >
-              <LinkButtons />
+              {isOpen && <LinkButtons />}
             </div>
           </div>
         )}
