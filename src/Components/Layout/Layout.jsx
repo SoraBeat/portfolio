@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 
 const Layout = ({ children }) => {
   return (
-    <div className="select-none">
+    <div className="select-none flex flex-col justify-between h-screen lg:block lg:overflow-hidden">
       <Header />
       {children}
       <Footer />

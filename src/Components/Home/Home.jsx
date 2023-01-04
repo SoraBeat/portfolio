@@ -4,14 +4,18 @@ import fotoPose from "../../Assets/Images/fotoPose1.png";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { AiFillFacebook, AiFillLinkedin } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
-import profilePhoto from "../../Assets/Images/profileFoto.jpg"
+import profilePhoto from "../../Assets/Images/profileFoto.jpg";
+import AnimatedDiv from "../AnimatedDiv/AnimatedDiv";
+import backgroundWave from "../../Assets/Images/wave.png";
 
 const Home = () => {
   return (
-    <>
-      <div className="w-full lg:w-11/12 text-white flex flex-col-reverse lg:flex-row py-16 xl:py-10 px-5 sm:px-28 gap-10 xl:px-32 lg:gap-20 items-center mx-auto">
+    <AnimatedDiv>
+      <div className="max-w-[1400px] w-full lg:w-11/12 text-white flex flex-col-reverse lg:flex-row py-16 xl:py-10 px-5 sm:px-28 gap-10 xl:px-32 lg:gap-20 items-center mx-auto">
         <div className="z-10 w-full lg:w-4/6 xl:w-1/2 2xl:w-5/12 mx-auto flex flex-col justify-center items-center lg:items-start animate-in slide-in-from-left-full duration-300 overflow-hidden">
-          <h1 className="text-5xl font-bold xl:text-7xl lg:mt-28">ROA LAUTARO</h1>
+          <h1 className="text-5xl font-bold xl:text-7xl lg:mt-28">
+            ROA LAUTARO
+          </h1>
           <h2 className="text-3xl font-bold">Frontend developer</h2>
           <p className="text-2xl font-light text-justify mt-3 mb-3">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
@@ -56,15 +60,24 @@ const Home = () => {
           </div>
         </div>
         <div className="md:w-1/2 lg:flex justify-center items-end overflow-hidden">
-          <img src={profilePhoto} alt="foto lautaro" className="w-48 h-48 lg:hidden rounded-full mx-auto animate-in zoom-in-0 duration-300"/>
           <img
-            className="-z-20 w-full xl:w-96 mt-20 ml-20 animate-in slide-in-from-bottom-full duration-300 hidden lg:block"
+            src={profilePhoto}
+            alt="foto lautaro"
+            className="w-48 h-48 lg:hidden rounded-full mx-auto animate-in zoom-in-0 duration-300"
+          />
+          <img
+            className="w-full xl:w-96 mt-20 ml-20 animate-in slide-in-from-bottom-full duration-300 hidden lg:block -z-10"
             src={fotoPose}
             alt="foto pose"
           />
         </div>
+        <img
+            className="fixed w-full h-full object-cover bottom-0 left-0 z-0 bg-right"
+            src={backgroundWave}
+            alt="foto olas"
+          />
       </div>
-    </>
+    </AnimatedDiv>
   );
 };
 
