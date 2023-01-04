@@ -12,7 +12,14 @@ module.exports = {
       darkGold: "#AC8747",
       backgroundLight: "#252836",
       backgroundDark: "#1F1D2B",
-      backgroundDarkest:"#191B24"
+      backgroundDarkest: "#191B24",
+    },
+    screens: {
+      xs:"500px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
     },
   },
   plugins: [require("tailwindcss-animate")],

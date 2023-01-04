@@ -14,7 +14,7 @@ const Carousel = () => {
 
   return (
     <>
-      <div className="flex items-center w-10/12 lg:w-10/12 xl:w-1/2 mx-auto">
+      <div className="max-w-[1200px] flex items-center w-10/12 lg:w-10/12 xl:w-1/2 mx-auto">
         <motion.div ref={carousel} className="cursor-grab overflow-hidden mt-5">
           <motion.div
             drag="x"
@@ -39,7 +39,7 @@ const Carousel = () => {
         </motion.div>
       </div>
       <motion.div initial={{opacity:1}} animate={{opacity:0}} transition={{delay:10}}>
-        <CgArrowsHAlt size={40} className="text-white mx-auto" />
+        <CgArrowsHAlt size={40} className="text-white mx-auto mb-10" />
       </motion.div>
     </>
   );
