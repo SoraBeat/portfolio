@@ -5,6 +5,16 @@
 * {
   font-family: "League Spartan", sans-serif;
 }
+.ql-container.ql-snow {
+  border: none !important;
+}
+.ql-toolbar.ql-snow {
+  border: none !important;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
 
 /* width */
 ::-webkit-scrollbar {

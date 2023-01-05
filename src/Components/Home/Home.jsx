@@ -59,14 +59,14 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <div className="md:w-1/2 lg:flex justify-center items-end overflow-hidden">
+        <div className="md:w-3/5 lg:flex justify-center items-end overflow-hidden">
           <img
             src={profilePhoto}
             alt="foto lautaro"
             className="w-48 h-48 lg:hidden rounded-full mx-auto animate-in zoom-in-0 duration-300"
           />
           <img
-            className="w-full xl:w-96 mt-20 ml-20 animate-in slide-in-from-bottom-full duration-300 hidden lg:block -z-10"
+            className="w-96 lg:mt-20 ml-20 animate-in slide-in-from-bottom-full duration-300 hidden lg:block -z-10"
             src={fotoPose}
             alt="foto pose"
           />

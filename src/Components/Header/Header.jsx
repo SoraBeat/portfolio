@@ -17,7 +17,7 @@ const Header = () => {
         )}
 
         {windowSize.width <= 1024 && (
-          <div className="transition-all absolute right-0 w-full sm:w-72 z-10">
+          <div className="transition-all absolute right-0 w-72 z-10">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="absolute right-5 top-5 z-10"

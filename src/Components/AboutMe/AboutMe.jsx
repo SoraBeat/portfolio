@@ -41,7 +41,7 @@ const AboutMe = () => {
         </div>
       </div>
       <div className="animate-in slide-in-from-bottom-full duration-300">
-        <h1 className=" text-white text-center text-4xl font-bold lg:text-5xl lg:mt-16 ">
+        <h1 className=" text-white text-center text-4xl font-bold lg:text-5xl lg:mt-10 ">
           Mis Skills
         </h1>
         <Carousel />
