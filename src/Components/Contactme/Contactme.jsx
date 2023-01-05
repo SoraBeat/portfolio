@@ -5,6 +5,7 @@ import ReactQuill from "react-quill";
 import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
 import Swal from "sweetalert2";
+import emailjs from "emailjs-com";
 import "react-quill/dist/quill.snow.css";
 import fotoPose from "../../Assets/Images/fotoPose2.png";
 import { AiFillFacebook, AiFillLinkedin } from "react-icons/ai";
@@ -29,7 +30,40 @@ const Contactme = () => {
               email: "",
               message: "",
             }}
-            onSubmit={(values) => {
+            onSubmit={(values, { resetForm }) => {
+              const valuesToSend = {
+                from_name: values.firstName,
+                email: values.email,
+                message: values.message,
+              };
+              emailjs
+                .send(
+                  "service_047wt3n",
+                  "template_h4huprs",
+                  valuesToSend,
+                  "B3-SFPUyljhE-PD64"
+                )
+                .then((res) => {
+                  Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "Email enviado!",
+                    text:"En breve me pondre en contacto! Muchas gracias!",
+                    showConfirmButton: false,
+                    timer: 1500,
+                  });
+                  resetForm();
+                })
+                .catch(() => {
+                  Swal.fire({
+                    position: "center",
+                    icon: "error",
+                    title: "Algo salio mal!",
+                    text:"Error al enviar email, disculpe las molestias! :c",
+                    showConfirmButton: false,
+                    timer: 1500,
+                  });
+                });
               console.log(values);
             }}
             validationSchema={validation}
@@ -57,10 +91,10 @@ const Contactme = () => {
                   className="h-9 w-full rounded-md mb-3  bg-backgroundDarkest p-2 text-white text-xl"
                 />
                 {errors.email && touched.email && (
-                <span className="text-darkGold font-bold mb-2">
-                  {errors.email}
-                </span>
-              )}
+                  <span className="text-darkGold font-bold mb-2">
+                    {errors.email}
+                  </span>
+                )}
                 <h2 className="text-white text-2xl font-bold mb-2">Mensaje</h2>
                 <Field name="message">
                   {({ field }) => (
@@ -79,7 +113,11 @@ const Contactme = () => {
               )} */}
                 <button
                   type="submit"
-                  className={`${(errors.firstName||errors.email)?"bg-gray":"bg-gold hover:bg-darkGold"} text-white font-bold text-3xl rounded-lg w-full xs:w-44 h-12`}
+                  className={`${
+                    errors.firstName || errors.email
+                      ? "bg-gray"
+                      : "bg-gold hover:bg-darkGold"
+                  } text-white font-bold text-3xl rounded-lg w-full xs:w-44 h-12`}
                 >
                   Enviar
                 </button>
