@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div className="select-none flex flex-col justify-between h-screen lg:block lg:overflow-hidden">
+    <div className="select-none w-screen h-screen overflow-x-hidden">
       <Header />
       <Outlet />
       <Footer />

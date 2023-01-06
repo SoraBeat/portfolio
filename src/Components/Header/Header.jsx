@@ -9,18 +9,18 @@ const Header = () => {
 
   return (
     <>
-      <div className="h-16 w-full text-white font-bold text-2xl overflow-hidden">
+      <div className="sticky top-0 h-16 w-full text-white font-bold text-2xl z-50">
         {windowSize.width > 1024 && (
-          <div className="relative flex justify-end items-center gap-10 px-10 py-5 transition-all z-10">
+          <div className="relative flex justify-end items-center gap-10 px-10 py-3 transition-all bg-backgroundDark shadow-md">
             <LinkButtons />
           </div>
         )}
 
         {windowSize.width <= 1024 && (
-          <div className="transition-all absolute right-0 w-72 z-10">
+          <div className="transition-all absolute right-0 top-0 w-72">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="absolute right-5 top-5 z-10"
+              className="absolute right-5 top-5"
             >
               {!isOpen ? (
                 <AiOutlineMenu size={40} />
@@ -29,9 +29,9 @@ const Header = () => {
               )}
             </button>
             <div
-              className={`relative flex flex-col justify-end items-center gap-10 pt-16 pb-7 rounded-b-xl ${
+              className={`absolute top-0 right-0 w-72 flex flex-col justify-end items-center gap-10 pt-16 pb-7 rounded-b-xl ${
                 isOpen ? "opacity-100 bg-backgroundLight" : "opacity-0"
-              } duration-75`}
+              } duration-75 -z-20`}
             >
               {isOpen && <LinkButtons />}
             </div>

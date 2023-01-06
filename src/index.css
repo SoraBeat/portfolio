@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url("./Assets/Images/wave.png");
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 * {
   font-family: "League Spartan", sans-serif;
 }
@@ -18,7 +29,9 @@ input:focus {
 
 /* width */
 ::-webkit-scrollbar {
+  position: relative;
   width: 10px;
+  height: 10px;
 }
 
 /* Track */

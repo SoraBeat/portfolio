@@ -1,5 +1,4 @@
 import React from "react";
-import backgroundWave from "../../Assets/Images/wave.png";
 import AnimatedDiv from "../AnimatedDiv/AnimatedDiv";
 import ReactQuill from "react-quill";
 import { Formik, Field, Form } from "formik";
@@ -22,8 +21,8 @@ const Contactme = () => {
 
   return (
     <AnimatedDiv>
-      <div className="flex flex-col max-w-[1200px] lg:flex-row items-center w-11/12 md:w-8/12 lg:w-9/12 mx-auto xl:gap-20 overflow-hidden gap-20 lg:-mt-20">
-        <div className="w-full lg:w-7/12 z-10 animate-in slide-in-from-left-full duration-300 overflow-hidden">
+      <div className="flex flex-col max-w-[1400px] lg:flex-row justify-center items-center w-11/12 md:w-8/12 lg:w-9/12 mx-auto overflow-hidden gap-5 xl:gap-20">
+        <div className="w-full lg:w-7/12 mt-10 animate-in slide-in-from-left-full duration-300 overflow-hidden">
           <Formik
             initialValues={{
               firstName: "",
@@ -48,7 +47,7 @@ const Contactme = () => {
                     position: "center",
                     icon: "success",
                     title: "Email enviado!",
-                    text:"En breve me pondre en contacto! Muchas gracias!",
+                    text: "En breve me pondre en contacto! Muchas gracias!",
                     showConfirmButton: false,
                     timer: 1500,
                   });
@@ -59,7 +58,7 @@ const Contactme = () => {
                     position: "center",
                     icon: "error",
                     title: "Algo salio mal!",
-                    text:"Error al enviar email, disculpe las molestias! :c",
+                    text: "Error al enviar email, disculpe las molestias! :c",
                     showConfirmButton: false,
                     timer: 1500,
                   });
@@ -70,7 +69,7 @@ const Contactme = () => {
           >
             {({ errors, touched }) => (
               <Form>
-                <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold  lg:mt-28 text-white mb-5">
+                <h1 className="text-4xl md:text-5xl font-bold text-white mb-5">
                   Contactame
                 </h1>
                 <h2 className="text-white text-2xl font-bold mb-2">Nombre</h2>
@@ -106,11 +105,6 @@ const Contactme = () => {
                     />
                   )}
                 </Field>
-                {/* {formik.errors.message && formik.touched.message && (
-                <span className="text-darkGold font-bold">
-                  {formik.errors.message}
-                </span>
-              )} */}
                 <button
                   type="submit"
                   className={`${
@@ -125,22 +119,21 @@ const Contactme = () => {
             )}
           </Formik>
         </div>
-        <div className="lg:w-1/2 lg:flex-col justify-center items-center relative">
+        <div className="lg:w-1/2 lg:flex-col justify-center items-center">
           <img
             src={fotoPose}
             alt="foto lautaro"
-            className="lg:mt-72 xl:mt-48 hidden lg:inline -z-50 animate-in slide-in-from-bottom-full duration-300"
+            className="w-96 mx-auto hidden lg:block animate-in slide-in-from-bottom-full duration-300"
           />
-          <div className="text-white flex flex-col xl:-mt-10">
+          <div className="text-white flex flex-col justify-start items-start">
             <div className="flex mx-auto lg:mx-0">
               <a
                 href="https://www.facebook.com/E.Lautaro.Roa/"
                 target="_blank"
                 rel="noreferrer"
-                className="z-10"
               >
                 <AiFillFacebook
-                  size={50}
+                  size={40}
                   className="hover:scale-125 transition-all duration-300"
                 />
               </a>
@@ -148,31 +141,25 @@ const Contactme = () => {
                 href="https://www.linkedin.com/in/lautaro-elian-roa-mazzola-b30247209/"
                 target="_blank"
                 rel="noreferrer"
-                className="z-10"
               >
                 <AiFillLinkedin
-                  size={50}
+                  size={40}
                   className="hover:scale-125 transition-all duration-300"
                 />
               </a>
-              <a href="mailto:lautaroa.lr@gmail.com" className="z-10">
+              <a href="mailto:lautaroa.lr@gmail.com">
                 <SiGmail
-                  size={50}
+                  size={40}
                   className="hover:scale-125 transition-all duration-300"
                 />
               </a>
             </div>
-            <p className="z-10 mt-2 text-lg text-center lg:text-left">
+            <p className="mt-2 text-lg text-center lg:text-left">
               +54 911-3280-7020
             </p>
-            <p className="z-10 text-lg text-center lg:text-left">
+            <p className="text-lg text-center lg:text-left">
               LautaRoa.lr@gmail.com
             </p>
-            <img
-              className="fixed w-full h-full object-cover bottom-0 left-0 z-0 bg-right"
-              src={backgroundWave}
-              alt="foto olas"
-            />
           </div>
         </div>
       </div>

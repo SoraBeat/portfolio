@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import AnimatedDiv from "../AnimatedDiv/AnimatedDiv";
 import Carousel from "../Carousel/Carousel";
-import backgroundWave from "../../Assets/Images/wave.png"
 
 const AboutMe = () => {
   const [cardIsActive, setCardIsActive] = useState(false);
   return (
     <AnimatedDiv className="overflow-hidden">
-      <div className="flex flex-col max-w-[1200px] lg:flex-row items-center w-11/12 md:w-8/12 lg:w-9/12 mx-auto mt-24 sm:mt-24 lg:-mt-10 xl:gap-20 overflow-hidden">
+      <div className="flex flex-col max-w-[1200px] lg:flex-row items-center w-11/12 md:w-8/12 lg:w-9/12 mx-auto mt-2 lg:-mt-10 xl:gap-20 overflow-hidden">
         <div className="text-white lg:w-1/2 animate-in slide-in-from-left-full duration-300">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold  lg:mt-28">Sobre Mi</h1>
+          <h1 className="text-4xl md:text-5xl font-bold  lg:mt-28">
+            Sobre Mi
+          </h1>
           <p className="text-xl xs:text-2xl font-light text-justify mt-3 mb-3">
             Lorem ipsum dolor it amet consectetur, adipisicing elit. Ducimus
             rerum quos delectus incidunt pariatur maiores tempora. Illum fugiat
@@ -46,11 +47,6 @@ const AboutMe = () => {
         </h1>
         <Carousel />
       </div>
-      <img
-        className="fixed w-full h-full object-cover bottom-0 left-0 -z-10 bg-right"
-        src={backgroundWave}
-        alt="foto olas"
-      />
     </AnimatedDiv>
   );
 };
