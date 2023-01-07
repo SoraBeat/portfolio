@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import AnimatedDiv from "../AnimatedDiv/AnimatedDiv";
 import Carousel from "../Carousel/Carousel";
+import star from "../../Assets/Images/star.png";
 
 const AboutMe = () => {
   const [cardIsActive, setCardIsActive] = useState(false);
   return (
     <AnimatedDiv className="overflow-hidden">
-      <div className="flex flex-col max-w-[1200px] lg:flex-row items-center w-11/12 md:w-8/12 lg:w-9/12 mx-auto mt-2 lg:-mt-10 xl:gap-20 overflow-hidden">
+      <div className="flex flex-col max-w-[1200px] lg:flex-row items-center w-11/12 md:w-8/12 lg:w-9/12 mx-auto mt-2 xl:gap-20 overflow-hidden">
         <div className="text-white lg:w-1/2 animate-in slide-in-from-left-full duration-300">
-          <h1 className="text-4xl md:text-5xl font-bold  lg:mt-28">
-            Sobre Mi
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold  lg:mt-28">Sobre Mi</h1>
           <p className="text-xl xs:text-2xl font-light text-justify mt-3 mb-3">
             Lorem ipsum dolor it amet consectetur, adipisicing elit. Ducimus
             rerum quos delectus incidunt pariatur maiores tempora. Illum fugiat
@@ -31,12 +30,36 @@ const AboutMe = () => {
           />
           <div
             className={`bg-gold w-28 h-40 xs:w-32 xs:h-52 xl:w-48 xl:h-72 rounded-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 transition-all ${
-              cardIsActive ? " translate-y-[-60%]" : "lg:-translate-y-1/3"
+              cardIsActive ? " translate-y-[-60%] rotate-2" : "lg:-translate-y-1/3"
             }`}
           />
           <div
             className={`bg-backgroundDarkest w-28 h-40 xs:w-32 xs:h-52 xl:w-48 xl:h-72 rounded-lg absolute top-1/2 left-1/2 transform -translate-x-3/4 -translate-y-1/2 lg:-translate-y-1/3 z-30 -rotate-3 transition-all ${
-              cardIsActive && "-rotate-[14deg] translate-x-[-100%]"
+              cardIsActive && "-rotate-[15deg] translate-x-[-125%]"
+            }`}
+          />
+          <img
+            src={star}
+            alt="star"
+            className={`w-5 h-5 rounded-lg absolute top-1/2 left-1/2 transform -translate-x-3/4 -translate-y-1/2 lg:-translate-y-1/3 z-10 -rotate-3 transition-all ${
+              cardIsActive &&
+              "-rotate-[180deg] translate-x-[-100px] xl:translate-x-[-150px] top-7 xl:top-20"
+            }`}
+          />
+          <img
+            src={star}
+            alt="star"
+            className={`w-5 h-5 rounded-lg absolute top-1/2 left-1/2 transform -translate-x-3/4 -translate-y-1/2 lg:-translate-y-1/3 z-40 -rotate-3 transition-all ${
+              cardIsActive &&
+              "-rotate-[180deg] translate-x-[100px] xl:translate-x-[150px] top-7 xl:top-20"
+            }`}
+          />
+          <img
+            src={star}
+            alt="star"
+            className={`w-5 h-5 rounded-lg absolute top-1/2 left-1/2 transform -translate-x-3/4 -translate-y-1/2 lg:-translate-y-[10%] z-30 -rotate-3 transition-all ${
+              cardIsActive &&
+              "rotate-[180deg] translate-x-[0px] top-0 xl:top-12"
             }`}
           />
         </div>

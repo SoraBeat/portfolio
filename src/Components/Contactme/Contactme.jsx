@@ -21,7 +21,7 @@ const Contactme = () => {
 
   return (
     <AnimatedDiv>
-      <div className="flex flex-col max-w-[1400px] lg:flex-row justify-center items-center w-11/12 md:w-8/12 lg:w-9/12 mx-auto overflow-hidden gap-5 xl:gap-20">
+      <div className="flex flex-col max-w-[1400px] lg:flex-row justify-center items-center w-11/12 md:w-8/12 lg:w-9/12 mx-auto overflow-hidden gap-5 xl:gap-20 xl:mt-5">
         <div className="w-full lg:w-7/12 mt-10 animate-in slide-in-from-left-full duration-300 overflow-hidden">
           <Formik
             initialValues={{
