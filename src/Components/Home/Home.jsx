@@ -23,7 +23,7 @@ const Home = () => {
             voluptatum id. Lorem ipsum dolor sit amet consectetur adipisicing
             elit. Lorem ipsum dolor sit amet consectetur
           </p>
-          <Link to={"/SobreMI"} className="w-fit">
+          <Link to={"/sobremi"} className="w-fit">
             <div className="flex justify-start gap-2 items-center text-gold hover:text-darkGold cursor-pointer">
               <h2 className="text-3xl font-bold">Ver más</h2>
               <BsFillArrowRightCircleFill size={30} />

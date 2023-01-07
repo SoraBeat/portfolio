@@ -10,13 +10,13 @@ const App = React.lazy(() => import("./App"));
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AnimatePresence>
-      <BrowserRouter>
-        <Suspense fallback={<Loader />}>
+    <BrowserRouter>
+      <Suspense fallback={<Loader />}>
+        <AnimatePresence>
           <App />
-        </Suspense>
-      </BrowserRouter>
-    </AnimatePresence>
+        </AnimatePresence>
+      </Suspense>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

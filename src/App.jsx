@@ -1,6 +1,5 @@
 import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
-
+import { Switch, Route, useLocation } from "react-router-dom";
 import Layout from "./Components/Layout/Layout";
 import Home from "./Components/Home/Home";
 import AboutMe from "./Components/AboutMe/AboutMe";
@@ -12,16 +11,26 @@ function App() {
 
   return (
     <>
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="SobreMI" element={<AboutMe />} />
-          <Route path="Proyectos" element={<h1>Proyectos</h1>} />
-          <Route path="Contactame" element={<Contactme />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Route>
-      </Routes>
-      <Routes></Routes>
+      <Layout>
+        <Switch location={location} key={location.pathname}>
+          <Route path="/sobremi">
+            <AboutMe />
+          </Route>
+          <Route path="/proyectos">
+            <h1>Proyectos</h1>
+          </Route>
+          <Route path="/contactame">
+            <Contactme />
+          </Route>
+
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="*">
+            <PageNotFound />
+          </Route>
+        </Switch>
+      </Layout>
     </>
   );
 }
