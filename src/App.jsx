@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
 import Layout from "./Components/Layout/Layout";
 import Home from "./Components/Home/Home";
@@ -8,13 +8,17 @@ import Contactme from "./Components/Contactme/Contactme";
 
 function App() {
   let location = useLocation();
+  const [cardModal, setCardModal] = useState({
+    card: 0,
+    isActive: false,
+  });
 
   return (
     <>
-      <Layout>
+      <Layout cardModal={cardModal}>
         <Switch location={location} key={location.pathname}>
           <Route path="/sobremi">
-            <AboutMe />
+            <AboutMe setCardModal={setCardModal} cardModal={cardModal} />
           </Route>
           <Route path="/proyectos">
             <h1>Proyectos</h1>
@@ -22,7 +26,6 @@ function App() {
           <Route path="/contactame">
             <Contactme />
           </Route>
-
           <Route exact path="/">
             <Home />
           </Route>

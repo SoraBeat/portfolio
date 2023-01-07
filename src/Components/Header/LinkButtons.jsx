@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const LinkButtons = () => {
   let location = useLocation();
   return (
-    <>
+    <div className="flex gap-5 mt-4 lg:mt-0 flex-col lg:flex-row text-center">
       <Link
         to={"/"}
         className={`${
@@ -38,7 +38,7 @@ const LinkButtons = () => {
       >
         Contactame
       </Link>
-    </>
+    </div>
   );
 };
 
