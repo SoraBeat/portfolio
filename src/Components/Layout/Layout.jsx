@@ -2,10 +2,10 @@ import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, cardModal }) => {
   return (
-    <div className="select-none flex flex-col justify-between h-screen lg:block lg:overflow-hidden">
-      <Header />
+    <div className="select-none w-screen h-screen overflow-x-hidden">
+      <Header cardModal={cardModal}/>
       {children}
       <Footer />
     </div>

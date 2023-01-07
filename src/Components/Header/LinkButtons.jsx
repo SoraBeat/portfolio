@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const LinkButtons = () => {
   let location = useLocation();
   return (
-    <>
+    <div className="flex gap-5 mt-4 lg:mt-0 flex-col lg:flex-row text-center">
       <Link
         to={"/"}
         className={`${
@@ -15,30 +15,30 @@ const LinkButtons = () => {
         Inicio
       </Link>
       <Link
-        to={"/SobreMI"}
+        to={"/sobremi"}
         className={`${
-          location.pathname === "/SobreMI" ? "text-gold" : "hover:text-gray"
+          location.pathname === "/sobremi" ? "text-gold" : "hover:text-gray"
         }`}
       >
         Sobre Mi
       </Link>
       <Link
-        to={"/Proyectos"}
+        to={"/proyectos"}
         className={`${
-          location.pathname === "/Proyectos" ? "text-gold" : "hover:text-gray"
+          location.pathname === "/proyectos" ? "text-gold" : "hover:text-gray"
         }`}
       >
         Proyectos
       </Link>
       <Link
-        to={"/Contactame"}
+        to={"/contactame"}
         className={`${
-          location.pathname === "/Contactame" ? "text-gold" : "hover:text-gray"
+          location.pathname === "/contactame" ? "text-gold" : "hover:text-gray"
         }`}
       >
         Contactame
       </Link>
-    </>
+    </div>
   );
 };
 

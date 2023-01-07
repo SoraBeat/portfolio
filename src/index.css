@@ -2,13 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url("./Assets/Images/wave.png");
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 * {
   font-family: "League Spartan", sans-serif;
+}
+.ql-container.ql-snow {
+  border: none !important;
+}
+.ql-toolbar.ql-snow {
+  border: none !important;
+}
+textarea:focus,
+input:focus {
+  outline: none;
 }
 
 /* width */
 ::-webkit-scrollbar {
+  position: relative;
   width: 10px;
+  height: 10px;
 }
 
 /* Track */
@@ -39,4 +62,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #191b24 inset;
+  transition: background-color 5000s ease-in-out 0s;
 }

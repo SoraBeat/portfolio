@@ -6,14 +6,13 @@ import { AiFillFacebook, AiFillLinkedin } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import profilePhoto from "../../Assets/Images/profileFoto.jpg";
 import AnimatedDiv from "../AnimatedDiv/AnimatedDiv";
-import backgroundWave from "../../Assets/Images/wave.png";
 
 const Home = () => {
   return (
     <AnimatedDiv>
-      <div className="max-w-[1400px] w-full lg:w-11/12 text-white flex flex-col-reverse lg:flex-row py-16 xl:py-10 px-5 sm:px-28 gap-10 xl:px-32 lg:gap-20 items-center mx-auto">
+      <div className="w-full max-w-[1400px] lg:w-11/12 text-white flex flex-col-reverse lg:flex-row py-5 xl:py-10 px-5 sm:px-28 gap-10 xl:px-32 lg:gap-20 items-center mx-auto">
         <div className="z-10 w-full lg:w-4/6 xl:w-1/2 2xl:w-5/12 mx-auto flex flex-col justify-center items-center lg:items-start animate-in slide-in-from-left-full duration-300 overflow-hidden">
-          <h1 className="text-5xl font-bold xl:text-7xl lg:mt-28">
+          <h1 className="text-5xl font-bold xl:text-6xl">
             ROA LAUTARO
           </h1>
           <h2 className="text-3xl font-bold">Frontend developer</h2>
@@ -24,7 +23,7 @@ const Home = () => {
             voluptatum id. Lorem ipsum dolor sit amet consectetur adipisicing
             elit. Lorem ipsum dolor sit amet consectetur
           </p>
-          <Link to={"/SobreMI"} className="w-fit">
+          <Link to={"/sobremi"} className="w-fit">
             <div className="flex justify-start gap-2 items-center text-gold hover:text-darkGold cursor-pointer">
               <h2 className="text-3xl font-bold">Ver más</h2>
               <BsFillArrowRightCircleFill size={30} />
@@ -59,23 +58,19 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <div className="md:w-1/2 lg:flex justify-center items-end overflow-hidden">
+        <div className="md:w-3/5 lg:flex justify-center items-end overflow-hidden">
           <img
             src={profilePhoto}
             alt="foto lautaro"
             className="w-48 h-48 lg:hidden rounded-full mx-auto animate-in zoom-in-0 duration-300"
           />
           <img
-            className="w-full xl:w-96 mt-20 ml-20 animate-in slide-in-from-bottom-full duration-300 hidden lg:block -z-10"
+            className="w-96 ml-20 animate-in slide-in-from-bottom-full duration-300 hidden lg:block -z-10"
             src={fotoPose}
             alt="foto pose"
           />
         </div>
-        <img
-            className="fixed w-full h-full object-cover bottom-0 left-0 z-0 bg-right"
-            src={backgroundWave}
-            alt="foto olas"
-          />
+
       </div>
     </AnimatedDiv>
   );

@@ -1,28 +1,39 @@
-import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
-
+import React, { useState } from "react";
+import { Switch, Route, useLocation } from "react-router-dom";
 import Layout from "./Components/Layout/Layout";
 import Home from "./Components/Home/Home";
 import AboutMe from "./Components/AboutMe/AboutMe";
 import PageNotFound from "./Components/PageNotFound/PageNotFound";
+import Contactme from "./Components/Contactme/Contactme";
 
 function App() {
-  const location = useLocation();
+  let location = useLocation();
+  const [cardModal, setCardModal] = useState({
+    card: 0,
+    isActive: false,
+  });
 
   return (
     <>
-      <Layout>
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="/SobreMi" element={<AboutMe />} />
-          <Route path="/Proyectos" element={<h1>Proyectos</h1>} />
-          <Route path="/Contactame" element={<h1>Contactame</h1>} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
+      <Layout cardModal={cardModal}>
+        <Switch location={location} key={location.pathname}>
+          <Route path="/sobremi">
+            <AboutMe setCardModal={setCardModal} cardModal={cardModal} />
+          </Route>
+          <Route path="/proyectos">
+            <h1>Proyectos</h1>
+          </Route>
+          <Route path="/contactame">
+            <Contactme />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="*">
+            <PageNotFound />
+          </Route>
+        </Switch>
       </Layout>
-      <Routes>
-        
-      </Routes>
     </>
   );
 }
