@@ -3,10 +3,15 @@ import { motion } from "framer-motion";
 import AnimatedDiv from "../AnimatedDiv/AnimatedDiv";
 import Carousel from "../Carousel/Carousel";
 import star from "../../Assets/Images/star.png";
+import misLogros from "../../Assets/Images/mislogros.png";
 import { AiOutlineClose } from "react-icons/ai";
+import card1 from "../../Assets/Images/card1.png";
+import card2 from "../../Assets/Images/card2.png";
+import card3 from "../../Assets/Images/card3.png";
 
 const AboutMe = ({ cardModal, setCardModal }) => {
   const [cardsIsActive, setCardsIsActive] = useState(false);
+
   useEffect(() => {
     return setCardModal({ card: 0, isActive: false });
   }, [setCardModal]);
@@ -58,7 +63,9 @@ const AboutMe = ({ cardModal, setCardModal }) => {
                 setCardModal({ card: 1, isActive: true });
               }
             }}
-          />
+          >
+            <img src={card2} alt="card 2" className="w-full h-full" />
+          </motion.div>
           <motion.div
             className={`bg-gold w-28 h-40 xs:w-32 xs:h-52 xl:w-48 xl:h-72 rounded-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all ${
               cardsIsActive && !cardModal.isActive
@@ -74,7 +81,9 @@ const AboutMe = ({ cardModal, setCardModal }) => {
                 setCardModal({ card: 2, isActive: true });
               }
             }}
-          />
+          >
+            <img src={card3} alt="card 3" className="w-full h-full" />
+          </motion.div>
           <motion.div
             className={`bg-backgroundDarkest w-28 h-40 xs:w-32 xs:h-52 xl:w-48 xl:h-72 rounded-lg absolute top-1/2 left-1/2 transform -translate-x-3/4 -translate-y-1/2 lg:-translate-y-1/3 -rotate-3 transition-all ${
               cardsIsActive &&
@@ -90,7 +99,9 @@ const AboutMe = ({ cardModal, setCardModal }) => {
                 setCardModal({ card: 3, isActive: true });
               }
             }}
-          />
+          >
+            <img src={card1} alt="card 1" className="w-full h-full" />
+          </motion.div>
           <img
             src={star}
             alt="star"
@@ -113,6 +124,15 @@ const AboutMe = ({ cardModal, setCardModal }) => {
             className={`w-5 h-5 rounded-lg absolute top-1/2 left-1/2 transform -translate-x-3/4 -translate-y-1/2 lg:-translate-y-[10%] z-20 -rotate-3 transition-all ${
               cardsIsActive &&
               "rotate-[180deg] translate-x-[0px] -top-1 xl:top-12"
+            }`}
+          />
+          <img
+            src={misLogros}
+            alt="mis logros"
+            className={`w-1/3 lg:w-1/2 rounded-lg absolute  transform transition-all ${
+              cardsIsActive
+                ? "translate-y-[230px] translate-x-[100%] lg:translate-x-[50%] lg:translate-y-[250px] xl:translate-y-[400px] z-40"
+                : "translate-y-[100px] translate-x-[100%] lg:translate-x-[50%] lg:translate-y-[200px] z-10"
             }`}
           />
         </div>
