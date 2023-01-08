@@ -21,7 +21,7 @@ const Layout = ({ children, cardModal }) => {
         </motion.div>
         <div
           className={`w-64 h-64 absolute right-5 bottom-16 bg-backgroundDark text-white rounded p-3 shadow-lg opacity-0 transition-all z-40 ${
-            helpIsActive && " opacity-100"
+            helpIsActive ? " opacity-100" : " hidden"
           }`}
         >
           <h2 className="text-center font-bold text-2xl">Sección ¡Ayuda!</h2>
@@ -34,7 +34,7 @@ const Layout = ({ children, cardModal }) => {
         </div>
         <div
           className={`w-10 h-10 absolute right-7 bottom-14 bg-backgroundDark rounded rotate-[45deg] shadow-lg opacity-0 transition-all z-40 ${
-            helpIsActive && " opacity-100"
+            helpIsActive ? " opacity-100 " : "hidden"
           }`}
         />
       </>

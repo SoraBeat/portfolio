@@ -2,12 +2,72 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import AnimatedDiv from "../AnimatedDiv/AnimatedDiv";
 import Carousel from "../Carousel/Carousel";
+import { AiOutlineClose } from "react-icons/ai";
+
 import star from "../../Assets/Images/star.png";
 import misLogros from "../../Assets/Images/mislogros.png";
-import { AiOutlineClose } from "react-icons/ai";
 import card1 from "../../Assets/Images/card1.png";
 import card2 from "../../Assets/Images/card2.png";
 import card3 from "../../Assets/Images/card3.png";
+
+import htmlIcon from "../../Assets/Images/html.png";
+import cssIcon from "../../Assets/Images/css.png";
+import jsIcon from "../../Assets/Images/js.png";
+import reactIcon from "../../Assets/Images/react.png";
+import reduxIcon from "../../Assets/Images/redux.png";
+import figmaIcon from "../../Assets/Images/figma.png";
+import csharpIcon from "../../Assets/Images/csharp.png";
+import sqlIcon from "../../Assets/Images/sql.png";
+import photoshopIcon from "../../Assets/Images/photoshop.png";
+import tailwindIcon from "../../Assets/Images/tailwind.png";
+import bootstrapIcon from "../../Assets/Images/bootstrap.png";
+
+const items = [
+  {
+    bgColor: "#e44d26",
+    icon: htmlIcon,
+  },
+  {
+    bgColor: "#379ad6",
+    icon: cssIcon,
+  },
+  {
+    bgColor: "#000",
+    icon: tailwindIcon,
+  },
+  {
+    bgColor: "#563d7c",
+    icon: bootstrapIcon,
+  },
+  {
+    bgColor: "#fccc00",
+    icon: jsIcon,
+  },
+  {
+    bgColor: "#fefefe",
+    icon: reactIcon,
+  },
+  {
+    bgColor: "#7046b2",
+    icon: reduxIcon,
+  },
+  {
+    bgColor: "#181818",
+    icon: figmaIcon,
+  },
+  {
+    bgColor: "#964d91",
+    icon: csharpIcon,
+  },
+  {
+    bgColor: "#4275cb",
+    icon: sqlIcon,
+  },
+  {
+    bgColor: "#001e36",
+    icon: photoshopIcon,
+  },
+];
 
 const AboutMe = ({ cardModal, setCardModal }) => {
   const [cardsIsActive, setCardsIsActive] = useState(false);
@@ -52,7 +112,9 @@ const AboutMe = ({ cardModal, setCardModal }) => {
           )}
           <motion.div
             className={`cursor-pointer bg-backgroundLight w-28 h-40 xs:w-32 xs:h-52 xl:w-48 xl:h-72 rounded-lg absolute top-1/2 left-1/2 transform -translate-x-1/3 -translate-y-1/2 lg:-translate-y-1/3 rotate-3 transition-all ${
-              cardsIsActive&&!cardModal.isActive && "rotate-[14deg] translate-x-[40px] hover:scale-110"
+              cardsIsActive &&
+              !cardModal.isActive &&
+              "rotate-[14deg] translate-x-[40px] hover:scale-110"
             } ${
               cardModal.card === 1 && cardModal.isActive
                 ? "z-[70] rotate-[0deg] scale-[1.5] translate-x-[-50px]"
@@ -141,7 +203,7 @@ const AboutMe = ({ cardModal, setCardModal }) => {
         <h1 className=" text-white text-center text-4xl font-bold lg:text-5xl lg:mt-10 ">
           Mis Skills
         </h1>
-        <Carousel />
+        <Carousel model="card" items={items} />
       </div>
     </AnimatedDiv>
   );

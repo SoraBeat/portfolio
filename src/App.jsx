@@ -5,6 +5,7 @@ import Home from "./Components/Home/Home";
 import AboutMe from "./Components/AboutMe/AboutMe";
 import PageNotFound from "./Components/PageNotFound/PageNotFound";
 import Contactme from "./Components/Contactme/Contactme";
+import Projects from "./Components/Projects/Projects";
 
 function App() {
   let location = useLocation();
@@ -21,7 +22,7 @@ function App() {
             <AboutMe setCardModal={setCardModal} cardModal={cardModal} />
           </Route>
           <Route path="/proyectos">
-            <h1>Proyectos</h1>
+            <Projects />
           </Route>
           <Route path="/contactame">
             <Contactme />
