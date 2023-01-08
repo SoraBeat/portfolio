@@ -14,7 +14,7 @@ const Proyect = ({ item }) => {
       <div
         className={`flex flex-col-reverse p-3 absolute h-full w-full transition-all top-0 opacity-0 hover:opacity-100 bg-backgroundModal text-center rounded-lg`}
       >
-        <p className="text-sm">{item.description}</p>
+        <p className="text-sm text-gold">{item.description}</p>
         <h1 className="text-xl">{item.title}</h1>
         <a
           href={item.webpage}
