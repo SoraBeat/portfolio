@@ -13,10 +13,10 @@ module.exports = {
       backgroundLight: "#252836",
       backgroundDark: "#1F1D2B",
       backgroundDarkest: "#191B24",
-      backgroundModal:"rgba(0, 0, 0, 0.80)"
+      backgroundModal: "rgba(0, 0, 0, 0.80)",
     },
     screens: {
-      xs:"500px",
+      xs: "500px",
       sm: "640px",
       md: "768px",
       lg: "1024px",

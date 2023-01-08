@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
   box-sizing: border-box;
 }
 
-body{
+body {
   background-image: url("./Assets/Images/wave.png");
   object-fit: fill;
   background-position: center;
@@ -29,7 +29,6 @@ input:focus {
 
 /* width */
 ::-webkit-scrollbar {
-  position: relative;
   width: 10px;
   height: 10px;
 }
@@ -76,4 +75,10 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: white;
   -webkit-box-shadow: 0 0 0px 1000px #191b24 inset;
   transition: background-color 5000s ease-in-out 0s;
+}
+
+.glow {
+  -webkit-box-shadow: 0px 0px 26px 0px rgba(255, 255, 255, 0.9);
+  -moz-box-shadow: 0px 0px 26px 0px rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 0px 26px 0px rgba(255, 255, 255, 0.9);
 }

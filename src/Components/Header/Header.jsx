@@ -12,27 +12,27 @@ const Header = ({ cardModal }) => {
   return (
     <>
       <div
-        className={`max-w-[1300px] lg:mt-3 sticky top-0 h-16 w-11/12 mx-auto text-white font-bold text-2xl z-40 transition-all bg-backgroundDark ${
+        className={`lg:mt-3 sticky top-0 h-16 mx-auto text-white font-bold text-2xl z-40 transition-all bg-backgroundDark shadow-md ${
           cardModal.isActive && "opacity-0"
         }`}
       >
         {windowSize.width > 1024 && (
-          <div className="relative flex justify-between items-center gap-10 px-10 py-3 transition-all">
+          <div className="relative flex justify-between items-center gap-10 px-10 py-3 transition-all bg-backgroundDark w-11/12 max-w-[1300px] mx-auto">
             <Link to={"/"}>
               <div className="flex items-center gap-1 hover:scale-110 transition-all">
                 <img src={logo} alt="logo" className="h-10" />
                 <p>Lauta Roa</p>
               </div>
             </Link>
-            <LinkButtons />
+            {!cardModal.isActive && <LinkButtons />}
           </div>
         )}
 
         {windowSize.width <= 1024 && (
-          <div className="transition-all absolute right-0 top-0 w-72">
+          <div className="transition-all absolute right-3 top-0 w-72">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="absolute right-0 top-5"
+              className="absolute right-0 top-3"
             >
               {!isOpen ? (
                 <AiOutlineMenu size={40} />
@@ -50,7 +50,7 @@ const Header = ({ cardModal }) => {
                   <img src={logo} alt="logo" className="h-10" />
                 </div>
               </Link>
-              {isOpen && <LinkButtons />}
+              {isOpen && !cardModal.isActive && <LinkButtons />}
             </div>
           </div>
         )}
