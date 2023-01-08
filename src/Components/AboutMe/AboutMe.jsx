@@ -51,8 +51,8 @@ const AboutMe = ({ cardModal, setCardModal }) => {
             </button>
           )}
           <motion.div
-            className={`bg-backgroundLight w-28 h-40 xs:w-32 xs:h-52 xl:w-48 xl:h-72 rounded-lg absolute top-1/2 left-1/2 transform -translate-x-1/3 -translate-y-1/2 lg:-translate-y-1/3 rotate-3 transition-all ${
-              cardsIsActive && "rotate-[14deg] translate-x-[40px]"
+            className={`cursor-pointer bg-backgroundLight w-28 h-40 xs:w-32 xs:h-52 xl:w-48 xl:h-72 rounded-lg absolute top-1/2 left-1/2 transform -translate-x-1/3 -translate-y-1/2 lg:-translate-y-1/3 rotate-3 transition-all ${
+              cardsIsActive&&!cardModal.isActive && "rotate-[14deg] translate-x-[40px] hover:scale-110"
             } ${
               cardModal.card === 1 && cardModal.isActive
                 ? "z-[70] rotate-[0deg] scale-[1.5] translate-x-[-50px]"
@@ -67,10 +67,10 @@ const AboutMe = ({ cardModal, setCardModal }) => {
             <img src={card2} alt="card 2" className="w-full h-full" />
           </motion.div>
           <motion.div
-            className={`bg-gold w-28 h-40 xs:w-32 xs:h-52 xl:w-48 xl:h-72 rounded-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all ${
+            className={`cursor-pointer bg-gold w-28 h-40 xs:w-32 xs:h-52 xl:w-48 xl:h-72 rounded-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all ${
               cardsIsActive && !cardModal.isActive
-                ? " translate-y-[-60%] rotate-2"
-                : "lg:-translate-y-1/3"
+                ? " translate-y-[-60%] rotate-2 hover:scale-110"
+                : "lg:-translate-y-1/3 "
             } ${
               cardModal.card === 2 && cardModal.isActive
                 ? "z-[70] rotate-[0deg] scale-[1.5] translate-x-[-50px]"
@@ -85,10 +85,10 @@ const AboutMe = ({ cardModal, setCardModal }) => {
             <img src={card3} alt="card 3" className="w-full h-full" />
           </motion.div>
           <motion.div
-            className={`bg-backgroundDarkest w-28 h-40 xs:w-32 xs:h-52 xl:w-48 xl:h-72 rounded-lg absolute top-1/2 left-1/2 transform -translate-x-3/4 -translate-y-1/2 lg:-translate-y-1/3 -rotate-3 transition-all ${
+            className={`cursor-pointer bg-backgroundDarkest w-28 h-40 xs:w-32 xs:h-52 xl:w-48 xl:h-72 rounded-lg absolute top-1/2 left-1/2 transform -translate-x-3/4 -translate-y-1/2 lg:-translate-y-1/3 -rotate-3 transition-all  ${
               cardsIsActive &&
               !cardModal.isActive &&
-              "-rotate-[15deg] translate-x-[-125%]"
+              "-rotate-[15deg] translate-x-[-125%] hover:scale-110"
             } ${
               cardModal.card === 3 && cardModal.isActive
                 ? "z-[70] rotate-[0.5deg] scale-[1.5] translate-x-[-47px]"
