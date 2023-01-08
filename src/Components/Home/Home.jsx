@@ -10,7 +10,7 @@ import AnimatedDiv from "../AnimatedDiv/AnimatedDiv";
 const Home = () => {
   return (
     <AnimatedDiv>
-      <div className="w-full max-w-[1400px] lg:w-11/12 text-white flex flex-col-reverse lg:flex-row py-5 xl:py-10 px-5 sm:px-28 gap-10 xl:px-32 lg:gap-20 items-center mx-auto">
+      <div className="w-full max-w-[1400px] lg:w-11/12 text-white flex flex-col-reverse lg:flex-row py-5 xl:py-10 px-5 sm:px-28 gap-10 xl:px-32 lg:gap-20 items-center mx-auto lg:mt-5">
         <div className="z-10 w-full lg:w-4/6 xl:w-1/2 2xl:w-5/12 mx-auto flex flex-col justify-center items-center lg:items-start animate-in slide-in-from-left-full duration-300 overflow-hidden">
           <h1 className="text-5xl font-bold xl:text-6xl">
             ROA LAUTARO

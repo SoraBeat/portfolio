@@ -141,7 +141,7 @@ const JuegosVarios = [
 const Projects = () => {
   return (
     <AnimatedDiv>
-      <div className="text-white text-center lg:text-left transition-all flex flex-col gap-5 max-w-[1200px] mx-auto w-full lg:w-10/12 lg:mt-10">
+      <div className="text-white text-center lg:text-left transition-all flex flex-col gap-5 max-w-[1200px] mx-auto w-full lg:w-10/12 mt-5 lg:mt-10">
         <h1 className="text-4xl md:text-5xl font-bold">Proyectos</h1>
         <div>
           <h2 className="text-2xl font-bold lg:text-3xl">

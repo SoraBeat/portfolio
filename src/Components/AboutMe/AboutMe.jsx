@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import AnimatedDiv from "../AnimatedDiv/AnimatedDiv";
 import Carousel from "../Carousel/Carousel";
 import { AiOutlineClose } from "react-icons/ai";
+import { MdOutlineFileDownload } from "react-icons/md";
+import cv from "../../Assets/Documents/CvRoaLautaro.pdf";
 
 import star from "../../Assets/Images/star.png";
 import misLogros from "../../Assets/Images/mislogros.png";
@@ -78,9 +80,9 @@ const AboutMe = ({ cardModal, setCardModal }) => {
 
   return (
     <AnimatedDiv className="overflow-hidden">
-      <div className="flex flex-col max-w-[1200px] lg:flex-row items-center w-11/12 md:w-8/12 lg:w-9/12 mx-auto mt-2 xl:gap-20 overflow-hidden">
+      <div className="flex flex-col max-w-[1200px] lg:flex-row items-center w-11/12 md:w-8/12 lg:w-9/12 mx-auto xl:gap-20 overflow-hidden mt-5 lg:mt-0">
         <div className="text-white lg:w-1/2 animate-in slide-in-from-left-full duration-300">
-          <h1 className="text-4xl md:text-5xl font-bold  lg:mt-28">Sobre Mi</h1>
+          <h1 className="text-4xl md:text-5xl font-bold  lg:mt-20">Sobre Mi</h1>
           <p className="text-xl xs:text-2xl font-light text-justify mt-3 mb-3">
             Lorem ipsum dolor it amet consectetur, adipisicing elit. Ducimus
             rerum quos delectus incidunt pariatur maiores tempora. Illum fugiat
@@ -88,9 +90,17 @@ const AboutMe = ({ cardModal, setCardModal }) => {
             voluptatum id. Lorem ipsum dolor sit amet consectetur adipisicing
             elit. Lorem ipsum dolor sit amet consectetur
           </p>
+          <div className="w-fit">
+            <a href={cv} download="Curriculum Vitae Roa Lautaro">
+              <div className="bg-gold w-56 h-12 text-2xl font-bold rounded flex justify-center items-center transition-all hover:bg-darkGold px-3">
+                <p>Descargar CV</p>
+                <MdOutlineFileDownload size={40} />
+              </div>
+            </a>
+          </div>
         </div>
         <div
-          className="relative w-full lg:w-3/5 transition-all overflow-visible h-[300px] xl:h-[500px] animate-in slide-in-from-right-full duration-300"
+          className="relative w-full lg:w-3/5 transition-all overflow-visible h-[300px] xl:h-[500px] animate-in slide-in-from-right-full duration-300 mt-10 lg:-mt-20 xl:mt-0"
           onMouseEnter={() => setCardsIsActive(true)}
           onMouseLeave={() => setCardsIsActive(false)}
         >
