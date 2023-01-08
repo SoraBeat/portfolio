@@ -1,6 +1,7 @@
 import React from "react";
 import AnimatedDiv from "../AnimatedDiv/AnimatedDiv";
 import Carousel from "../Carousel/Carousel";
+
 import ongSomosMas from "../../Assets/Images/somosmas.png";
 import superapi from "../../Assets/Images/superapi.png";
 import todolist from "../../Assets/Images/todolist.png";
@@ -8,6 +9,12 @@ import galagcine from "../../Assets/Images/galagcine.png";
 import thinknchoose from "../../Assets/Images/thinknchoose.png";
 import simon from "../../Assets/Images/simon.png";
 import portfolioviejo from "../../Assets/Images/portfolioviejo.png";
+
+import portfolionuevodesign from "../../Assets/Images/portfolionuevodesign.png";
+import portfolioviejodesign from "../../Assets/Images/portfolioviejodesign.png";
+import noticiasdesign from "../../Assets/Images/noticiasdesign.png";
+import superapidesign from "../../Assets/Images/superapidesign.png";
+import ghostbrothersdesign from "../../Assets/Images/ghostbrothersdesign.png";
 
 const itemsProgramming = [
   {
@@ -54,6 +61,39 @@ const itemsProgramming = [
   },
 ];
 
+const itemsDesign = [
+  {
+    title: "Portfolio Nuevo",
+    description: "Proyecto Individual",
+    background: portfolionuevodesign,
+    webpage: "https://www.figma.com/file/JBXjCFSf6MbsYJUH9c6Kxx/Untitled?node-id=12%3A2&t=jGfieZSkxKlTUgWK-1",
+  },
+  {
+    title: "Portfolio Viejo",
+    description: "Proyecto Individual",
+    background: portfolioviejodesign,
+    webpage: "https://www.figma.com/file/MrrnhyZLZrm445ylmZKHLS/Portafolio-Web?node-id=0%3A1&t=bEIx63Iy84BcWVkH-1",
+  },
+  {
+    title: "Pagina noticias",
+    description: "Proyecto Individual",
+    background: noticiasdesign,
+    webpage: "https://www.figma.com/file/Tc3ZSYwuxjNcbR3ZyjPwWZ/Maquetado-Blog?node-id=0%3A1&t=i7L6hcPIsgmJGPXr-1",
+  },
+  {
+    title: "SuperApi",
+    description: "Proyecto Individual",
+    background: superapidesign,
+    webpage: "https://www.figma.com/file/nsKbSEyUK5j0a8oWE3hTFK/Untitled?node-id=0%3A1&t=iLfwUnZziBgLSkJE-1",
+  },
+  {
+    title: "Ghost Brothers",
+    description: "Proyecto Individual",
+    background: ghostbrothersdesign,
+    webpage: "https://www.figma.com/file/eCbVHY4CExQQnNVbp5Bdhb/Ghost-Brothers?node-id=0%3A1&t=eYRjK5uWLOzxmj4w-1",
+  },
+];
+
 const Projects = () => {
   return (
     <AnimatedDiv>
@@ -68,6 +108,7 @@ const Projects = () => {
         <div>
           <h2 className="text-2xl font-bold lg:text-3xl">
             Diseño <span className="text-gold">WEB</span>
+            <Carousel items={itemsDesign} />
           </h2>
         </div>
         <div>
