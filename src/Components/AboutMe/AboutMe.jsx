@@ -23,6 +23,7 @@ import sqlIcon from "../../Assets/Images/sql.png";
 import photoshopIcon from "../../Assets/Images/photoshop.png";
 import tailwindIcon from "../../Assets/Images/tailwind.png";
 import bootstrapIcon from "../../Assets/Images/bootstrap.png";
+import githubIcon from "../../Assets/Images/github.png";
 
 const items = [
   {
@@ -69,6 +70,10 @@ const items = [
     bgColor: "#001e36",
     icon: photoshopIcon,
   },
+  {
+    bgColor: "#9cdaf0",
+    icon: githubIcon,
+  },
 ];
 
 const AboutMe = ({ cardModal, setCardModal }) => {
@@ -84,10 +89,18 @@ const AboutMe = ({ cardModal, setCardModal }) => {
         <div className="text-white lg:w-1/2 animate-in slide-in-from-left-full duration-300">
           <h1 className="text-4xl md:text-5xl font-bold  lg:mt-20">Sobre Mi</h1>
           <p className="text-xl xs:text-2xl font-light text-justify mt-3 mb-3">
-            Buenas nuevamente! les contare un poco mis inicios en la programación. En 2021 salimos segundos en la Goto Game Jam la cual gracias a eso la UTN FRGP nos otorgó una beca. A la par de la carrera, programé videojuegos un año y ahora cambié mi rumbo a la programación WEB. Apasionado de los videojuegos y la informática, soy una persona creativa que le gusta trabajar en equipo, autodidacta y siempre aprendiendo constantemente!
+            Buenas nuevamente! les contare un poco mis inicios en la
+            programación. En 2021 salimos segundos en la Goto Game Jam la cual
+            gracias a eso la UTN FRGP nos otorgó una beca. A la par de la
+            carrera, programé videojuegos un año y ahora cambié mi rumbo a la
+            programación WEB. Apasionado de los videojuegos y la informática,
+            soy una persona creativa que le gusta trabajar en equipo,
+            autodidacta y siempre aprendiendo constantemente!
             <br />
             <br />
-            <span className="text-gold">"Si lo puedes imaginar lo puedes programar."</span>
+            <span className="text-gold">
+              "Si lo puedes imaginar lo puedes programar."
+            </span>
           </p>
           <div className="w-fit mx-auto lg:mx-0">
             <a href={cv} download="Curriculum Vitae Roa Lautaro">
