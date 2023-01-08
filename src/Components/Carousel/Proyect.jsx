@@ -11,7 +11,8 @@ const Proyect = ({ item }) => {
         <LazyLoadImage
           src={item.background}
           alt="background"
-          className="w-full h-full rounded-lg"
+          className="h-48 min-w-[300px] max-w-[300px] rounded-lg"
+          wrapperClassName="h-48 min-w-[300px] max-w-[300px] rounded-lg"
           effect="blur"
         />
       </div>
