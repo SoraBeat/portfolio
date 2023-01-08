@@ -10,18 +10,15 @@ import AnimatedDiv from "../AnimatedDiv/AnimatedDiv";
 const Home = () => {
   return (
     <AnimatedDiv>
-      <div className="w-full max-w-[1400px] lg:w-11/12 text-white flex flex-col-reverse lg:flex-row py-5 xl:py-10 px-5 sm:px-28 gap-10 xl:px-32 lg:gap-20 items-center mx-auto lg:mt-5">
+      <div className="w-full max-w-[1400px] lg:w-11/12 text-white flex flex-col-reverse lg:flex-row py-5 xl:py-10 px-5 sm:px-28 gap-10 xl:px-32 lg:gap-20 items-center mx-auto lg:mt-12 xl:mt-5">
         <div className="z-10 w-full lg:w-4/6 xl:w-1/2 2xl:w-5/12 mx-auto flex flex-col justify-center items-center lg:items-start animate-in slide-in-from-left-full duration-300 overflow-hidden">
           <h1 className="text-5xl font-bold xl:text-6xl">
             ROA LAUTARO
           </h1>
           <h2 className="text-3xl font-bold">Frontend developer</h2>
           <p className="text-2xl font-light text-justify mt-3 mb-3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
-            rerum quos delectus incidunt pariatur maiores tempora. Illum fugiat
-            nemo, numquam nulla necessitatibus quasi ex. Facere deserunt saepe a
-            voluptatum id. Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Lorem ipsum dolor sit amet consectetur
+            Sean bienvenid@s a mi portfolio! Me llamo Lautaro y soy Técnico Superior en programación (UTN FRGP). Vivo en Buenos Aires Argentina. En este portfolio encontraran tanto sobre mi así como proyectos que he realizado a lo largo de este tiempo, siéntanse libres de explorarlo. Cualquier duda o comentario puedes contactarme a través de mis redes o en la pestaña de "Contactame".
+            Saludos!
           </p>
           <Link to={"/sobremi"} className="w-fit">
             <div className="flex justify-start gap-2 items-center text-gold hover:text-darkGold cursor-pointer">

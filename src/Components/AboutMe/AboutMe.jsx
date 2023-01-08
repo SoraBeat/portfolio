@@ -84,13 +84,12 @@ const AboutMe = ({ cardModal, setCardModal }) => {
         <div className="text-white lg:w-1/2 animate-in slide-in-from-left-full duration-300">
           <h1 className="text-4xl md:text-5xl font-bold  lg:mt-20">Sobre Mi</h1>
           <p className="text-xl xs:text-2xl font-light text-justify mt-3 mb-3">
-            Lorem ipsum dolor it amet consectetur, adipisicing elit. Ducimus
-            rerum quos delectus incidunt pariatur maiores tempora. Illum fugiat
-            nemo, numquam nulla necessitatibus quasi ex. Facere deserunt saepe a
-            voluptatum id. Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Lorem ipsum dolor sit amet consectetur
+            Buenas nuevamente! les contare un poco mis inicios en la programación. En 2021 salimos segundos en la Goto Game Jam la cual gracias a eso la UTN FRGP nos otorgó una beca. A la par de la carrera, programé videojuegos un año y ahora cambié mi rumbo a la programación WEB. Apasionado de los videojuegos y la informática, soy una persona creativa que le gusta trabajar en equipo, autodidacta y siempre aprendiendo constantemente!
+            <br />
+            <br />
+            <span className="text-gold">"Si lo puedes imaginar lo puedes programar."</span>
           </p>
-          <div className="w-fit">
+          <div className="w-fit mx-auto lg:mx-0">
             <a href={cv} download="Curriculum Vitae Roa Lautaro">
               <div className="bg-gold w-56 h-12 text-2xl font-bold rounded flex justify-center items-center transition-all hover:bg-darkGold px-3">
                 <p>Descargar CV</p>
