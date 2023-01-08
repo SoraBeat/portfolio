@@ -16,6 +16,12 @@ import noticiasdesign from "../../Assets/Images/noticiasdesign.png";
 import superapidesign from "../../Assets/Images/superapidesign.png";
 import ghostbrothersdesign from "../../Assets/Images/ghostbrothersdesign.png";
 
+import dimensionkawalopus from "../../Assets/Images/dimensionkawalopus.png";
+import bensacrifice from "../../Assets/Images/bensacrifice.png";
+import dontbreakit from "../../Assets/Images/dontbreakit.png";
+import foodrun from "../../Assets/Images/foodrun.png";
+import closeyoureyes from "../../Assets/Images/closeyoureyes.png";
+
 const itemsProgramming = [
   {
     title: "ONG Somos Más",
@@ -66,31 +72,69 @@ const itemsDesign = [
     title: "Portfolio Nuevo",
     description: "Proyecto Individual",
     background: portfolionuevodesign,
-    webpage: "https://www.figma.com/file/JBXjCFSf6MbsYJUH9c6Kxx/Untitled?node-id=12%3A2&t=jGfieZSkxKlTUgWK-1",
+    webpage:
+      "https://www.figma.com/file/JBXjCFSf6MbsYJUH9c6Kxx/Untitled?node-id=12%3A2&t=jGfieZSkxKlTUgWK-1",
   },
   {
     title: "Portfolio Viejo",
     description: "Proyecto Individual",
     background: portfolioviejodesign,
-    webpage: "https://www.figma.com/file/MrrnhyZLZrm445ylmZKHLS/Portafolio-Web?node-id=0%3A1&t=bEIx63Iy84BcWVkH-1",
+    webpage:
+      "https://www.figma.com/file/MrrnhyZLZrm445ylmZKHLS/Portafolio-Web?node-id=0%3A1&t=bEIx63Iy84BcWVkH-1",
   },
   {
     title: "Pagina noticias",
     description: "Proyecto Individual",
     background: noticiasdesign,
-    webpage: "https://www.figma.com/file/Tc3ZSYwuxjNcbR3ZyjPwWZ/Maquetado-Blog?node-id=0%3A1&t=i7L6hcPIsgmJGPXr-1",
+    webpage:
+      "https://www.figma.com/file/Tc3ZSYwuxjNcbR3ZyjPwWZ/Maquetado-Blog?node-id=0%3A1&t=i7L6hcPIsgmJGPXr-1",
   },
   {
     title: "SuperApi",
     description: "Proyecto Individual",
     background: superapidesign,
-    webpage: "https://www.figma.com/file/nsKbSEyUK5j0a8oWE3hTFK/Untitled?node-id=0%3A1&t=iLfwUnZziBgLSkJE-1",
+    webpage:
+      "https://www.figma.com/file/nsKbSEyUK5j0a8oWE3hTFK/Untitled?node-id=0%3A1&t=iLfwUnZziBgLSkJE-1",
   },
   {
     title: "Ghost Brothers",
     description: "Proyecto Individual",
     background: ghostbrothersdesign,
-    webpage: "https://www.figma.com/file/eCbVHY4CExQQnNVbp5Bdhb/Ghost-Brothers?node-id=0%3A1&t=eYRjK5uWLOzxmj4w-1",
+    webpage:
+      "https://www.figma.com/file/eCbVHY4CExQQnNVbp5Bdhb/Ghost-Brothers?node-id=0%3A1&t=eYRjK5uWLOzxmj4w-1",
+  },
+];
+
+const JuegosVarios = [
+  {
+    title: "Dimension Kawalopus",
+    description: "Proyecto Grupal",
+    background: dimensionkawalopus,
+    webpage: "https://big-maki.itch.io/dimension-kawalopus",
+  },
+  {
+    title: "Ben´s Sacrifice",
+    description: "Proyecto Individual",
+    background: bensacrifice,
+    webpage: "https://cutehatgames.itch.io/bens-sacrifice",
+  },
+  {
+    title: "Dont BREAK it",
+    description: "Proyecto Individual",
+    background: dontbreakit,
+    webpage: "https://cutehatgames.itch.io/dont-break-it",
+  },
+  {
+    title: "Food RUN",
+    description: "Proyecto Individual",
+    background: foodrun,
+    webpage: "https://cutehatgames.itch.io/food-run",
+  },
+  {
+    title: "Close Your Eyes",
+    description: "Proyecto Grupal",
+    background: closeyoureyes,
+    webpage: "https://cutehatgames.itch.io/close-your-eyes",
   },
 ];
 
@@ -113,8 +157,9 @@ const Projects = () => {
         </div>
         <div>
           <h2 className="text-2xl font-bold lg:text-3xl">
-            Proyectos <span className="text-gold">VARIOS</span>
+            Juegos <span className="text-gold">VARIOS</span>
           </h2>
+          <Carousel items={JuegosVarios} />
         </div>
       </div>
     </AnimatedDiv>
