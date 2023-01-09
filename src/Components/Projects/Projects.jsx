@@ -27,7 +27,7 @@ const itemsProgramming = [
     title: "ONG Somos Más",
     description: "Proyecto Grupal",
     background: ongSomosMas,
-    webpage: "https://github.com/SoraBeat/React-SXXI-T4-FORK",
+    webpage: "https://react-sxxi-t4-fork-b380x9tpd-yonabordon.vercel.app/",
   },
   {
     title: "SuperApi",
